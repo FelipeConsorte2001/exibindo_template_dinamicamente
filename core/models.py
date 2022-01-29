@@ -86,4 +86,4 @@ class Featurs(Base):
         verbose_name_plural = 'Featuring'
 
     def __str__(self):
-        return self.nome
+        return self.titulo
