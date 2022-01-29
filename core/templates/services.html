@@ -1,0 +1,27 @@
+{% load static %}
+<section id="services" class="section-padding">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s">Nossos serviços</h2>
+          <div class="shape wow fadeInDown" data-wow-delay="0.3s"></div>
+        </div>
+        <div class="row">
+          <!-- Services item -->
+          {% for i in servicos %}
+          <div class="col-md-6 col-lg-4 col-xs-12">
+            <div class="services-item wow fadeInRight" data-wow-delay="0.3s">
+              <div class="icon">
+                <i class="{{ i.icone }}"></i> <!---lni-cog-->
+              </div>
+              <div class="services-content">
+                <h3><a href="#">{{ i.servico }}</a></h3>
+                <p>{{ i.descricao }} </p>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+          <!-- Services item -->
+
+        </div>
+      </div>
+    </section>
