@@ -5,7 +5,6 @@ from django.urls import reverse_lazy
 from django.contrib import messages
 
 
-
 class IndexView(FormView):
     template_name = 'index.html'
     form_class = ContatoForm
@@ -14,6 +13,7 @@ class IndexView(FormView):
 
     def get_context_data(self, **kwargs):
         context = super(IndexView, self).get_context_data(**kwargs)
+
         context['servicos'] = Servico.objects.order_by('?').all()
         context['funcionarios'] = Funcionario.objects.order_by('?').all()
         context['featurs_esquerda'] = Featurs.objects.all()[:3]
